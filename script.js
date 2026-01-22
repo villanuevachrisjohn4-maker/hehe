@@ -5,19 +5,26 @@ document.addEventListener("DOMContentLoaded", () => {
   const noBtn = document.getElementById("noBtn");
   const questionBox = document.getElementById("questionBox");
   const resultBox = document.getElementById("resultBox");
+  const heart = document.querySelector(".heart");
 
-  /* 🔊 AUDIO UNLOCK */
+  /* 💓 MUSIC BPM (CHANGE IF YOU WANT) */
+  const BPM = 72;
+  const beatDuration = 60 / BPM;
+
+  /* 🔊 TAP TO START AUDIO */
   overlay.addEventListener("click", () => {
     bgMusic.volume = 0.8;
     bgMusic.play().then(() => {
       overlay.style.display = "none";
+      if (heart) {
+        heart.style.setProperty("--beat", `${beatDuration}s`);
+      }
     });
   });
 
   /* 💥 CONFETTI */
   const canvas = document.getElementById("confetti");
   const ctx = canvas.getContext("2d");
-
   canvas.width = window.innerWidth;
   canvas.height = window.innerHeight;
 
@@ -50,7 +57,6 @@ document.addEventListener("DOMContentLoaded", () => {
   yesBtn.addEventListener("click", () => {
     createConfetti();
     animateConfetti();
-
     questionBox.classList.add("hidden");
     resultBox.classList.remove("hidden");
   });

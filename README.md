@@ -19,7 +19,7 @@
   <!-- 💖 QUESTION BOX -->
   <div class="container" id="questionBox">
     <img src="start.gif" class="gif" alt="start gif">
-    <h2>Do you love me? 💞</h2>
+    <h2>Do you miss me? 💞</h2>
 
     <div class="buttons">
       <button class="btn yes" id="yesBtn">Yes 💖</button>

@@ -15,7 +15,7 @@
 
   <!-- 🎶 MUSIC -->
   <audio id="bgMusic" loop>
-    <source src="love-music.mp3" type="audio/mpeg">
+    <source src="Miss-music.mp3" type="audio/mpeg">
   </audio>
 
   <!-- 💥 CONFETTI -->
@@ -37,9 +37,9 @@
     <img src="end.gif" class="gif">
     <h2>I knew it! 😍</h2>
     <p class="message">You make my heart so happy 💕</p>
-    <div class="heart"></div>
   </div>
 
   <script src="script.js"></script>
 </body>
 </html>
+F

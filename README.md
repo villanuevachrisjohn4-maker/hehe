@@ -8,8 +8,15 @@
 </head>
 <body>
 
-  <!-- 🎶 BACKGROUND MUSIC -->
-  <audio id="bgMusic" loop autoplay playsinline>
+  <!-- 🔊 TAP TO START OVERLAY -->
+  <div id="audioOverlay">
+    <div class="overlay-box">
+      <p>Tap to start 💖</p>
+    </div>
+  </div>
+
+  <!-- 🎶 MUSIC -->
+  <audio id="bgMusic" loop>
     <source src="love-music.mp3" type="audio/mpeg">
   </audio>
 
@@ -18,7 +25,7 @@
 
   <!-- 💖 QUESTION BOX -->
   <div class="container" id="questionBox">
-    <img src="start.gif" class="gif" alt="start gif">
+    <img src="start.gif" class="gif">
     <h2>Do you miss me? 💞</h2>
 
     <div class="buttons">
@@ -29,13 +36,5 @@
 
   <!-- 😍 RESULT BOX -->
   <div class="container hidden" id="resultBox">
-    <img src="end.gif" class="gif" alt="end gif">
-    <h2>I knew it! 😍</h2>
-    <p class="message">You make my heart so happy 💕</p>
-    <div class="heart"></div>
-  </div>
-
-  <script src="script.js"></script>
-</body>
-</html>
-
+    <img src="end.gif" class="gif">
+    <h2>I k

@@ -1,0 +1,94 @@
+/* RESET */
+* {
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* 🌈 BACKGROUND */
+body {
+  margin: 0;
+  height: 100vh;
+  background: linear-gradient(-45deg, #ff9a9e, #fad0c4, #ffd1ff, #ffb6c1);
+  background-size: 400% 400%;
+  animation: gradientBG 12s ease infinite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* BACKGROUND ANIMATION */
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* 💕 CONTAINER */
+.container {
+  background: white;
+  padding: 25px;
+  border-radius: 25px;
+  width: 90%;
+  max-width: 380px;
+  text-align: center;
+  box-shadow: 0 25px 40px rgba(0,0,0,0.2);
+  animation: pop 0.8s ease;
+}
+
+/* POP ANIMATION */
+@keyframes pop {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+video {
+  width: 100%;
+  border-radius: 20px;
+  margin-bottom: 15px;
+}
+
+h2 {
+  color: #ff4d6d;
+}
+
+/* 💘 BUTTONS */
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 15px;
+}
+
+.btn {
+  padding: 12px 26px;
+  border-radius: 30px;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.yes {
+  background: #ff4d6d;
+  color: white;
+}
+
+.no {
+  background: #ddd;
+}
+
+/* HIDE */
+.hidden {
+  display: none;
+}

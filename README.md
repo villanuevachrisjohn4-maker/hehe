@@ -8,22 +8,17 @@
 </head>
 <body>
 
-  <!-- 🔊 TAP TO START -->
-  <div id="audioOverlay">
-    <div class="overlay-box">Tap to start 💖</div>
-  </div>
-
-  <!-- 🎶 MUSIC -->
-  <audio id="bgMusic" loop>
-    <source src="Miss-music.mp3" type="audio/mpeg">
+  <!-- 🎶 BACKGROUND MUSIC -->
+  <audio id="bgMusic" loop autoplay playsinline>
+    <source src="love-music.mp3" type="audio/mpeg">
   </audio>
 
   <!-- 💥 CONFETTI -->
   <canvas id="confetti"></canvas>
 
-  <!-- 💖 QUESTION -->
+  <!-- 💖 QUESTION BOX -->
   <div class="container" id="questionBox">
-    <img src="start.gif" class="gif">
+    <img src="start.gif" class="gif" alt="start gif">
     <h2>Do you miss me? 💞</h2>
 
     <div class="buttons">
@@ -32,14 +27,14 @@
     </div>
   </div>
 
-  <!-- 😍 RESULT -->
+  <!-- 😍 RESULT BOX -->
   <div class="container hidden" id="resultBox">
-    <img src="end.gif" class="gif">
+    <img src="end.gif" class="gif" alt="end gif">
     <h2>I knew it! 😍</h2>
     <p class="message">You make my heart so happy 💕</p>
+    <div class="heart"></div>
   </div>
 
   <script src="script.js"></script>
 </body>
 </html>
-F

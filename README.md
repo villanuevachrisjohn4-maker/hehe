@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Do You Miss Me? 💕</title>
+  <title>Do You Love Me? 💕</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
 </head>
@@ -19,7 +19,7 @@
   <!-- 💖 QUESTION BOX -->
   <div class="container" id="questionBox">
     <img src="start.gif" class="gif" alt="start gif">
-    <h2>Do you miss me? 💞</h2>
+    <h2>Do you love me? 💞</h2>
 
     <div class="buttons">
       <button class="btn yes" id="yesBtn">Yes 💖</button>

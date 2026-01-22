@@ -5,6 +5,21 @@ document.addEventListener("DOMContentLoaded", () => {
   const resultBox = document.getElementById("resultBox");
   const bgMusic = document.getElementById("bgMusic");
 
+  /* 🎶 SOUND ON OPEN (BEST POSSIBLE) */
+  bgMusic.volume = 0.8;
+  bgMusic.play().catch(() => {
+    console.log("Autoplay blocked, waiting for interaction");
+  });
+
+  const startMusicOnce = () => {
+    bgMusic.play().catch(() => {});
+    document.removeEventListener("click", startMusicOnce);
+    document.removeEventListener("touchstart", startMusicOnce);
+  };
+
+  document.addEventListener("click", startMusicOnce);
+  document.addEventListener("touchstart", startMusicOnce);
+
   /* 💥 CONFETTI */
   const canvas = document.getElementById("confetti");
   const ctx = canvas.getContext("2d");
@@ -41,18 +56,14 @@ document.addEventListener("DOMContentLoaded", () => {
     requestAnimationFrame(animateConfetti);
   }
 
-  /* 💖 YES */
+  /* 💖 YES BUTTON */
   yesBtn.addEventListener("click", () => {
-    bgMusic.volume = 0.8;
-    bgMusic.play().catch(() => {});
-
     createConfetti();
     animateConfetti();
 
     questionBox.classList.add("hidden");
     resultBox.classList.remove("hidden");
 
-    // Force animation (mobile fix)
     resultBox.style.animation = "none";
     resultBox.offsetHeight;
     resultBox.style.animation = "pop 0.8s ease";

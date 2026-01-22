@@ -1,35 +1,25 @@
 document.addEventListener("DOMContentLoaded", () => {
+  const bgMusic = document.getElementById("bgMusic");
+  const overlay = document.getElementById("audioOverlay");
   const yesBtn = document.getElementById("yesBtn");
   const noBtn = document.getElementById("noBtn");
   const questionBox = document.getElementById("questionBox");
   const resultBox = document.getElementById("resultBox");
-  const bgMusic = document.getElementById("bgMusic");
 
-  /* 🎶 SOUND ON OPEN (BEST POSSIBLE) */
-  bgMusic.volume = 0.8;
-  bgMusic.play().catch(() => {
-    console.log("Autoplay blocked, waiting for interaction");
+  /* 🔊 AUDIO UNLOCK */
+  overlay.addEventListener("click", () => {
+    bgMusic.volume = 0.8;
+    bgMusic.play().then(() => {
+      overlay.style.display = "none";
+    });
   });
-
-  const startMusicOnce = () => {
-    bgMusic.play().catch(() => {});
-    document.removeEventListener("click", startMusicOnce);
-    document.removeEventListener("touchstart", startMusicOnce);
-  };
-
-  document.addEventListener("click", startMusicOnce);
-  document.addEventListener("touchstart", startMusicOnce);
 
   /* 💥 CONFETTI */
   const canvas = document.getElementById("confetti");
   const ctx = canvas.getContext("2d");
 
-  function resizeCanvas() {
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
-  }
-  resizeCanvas();
-  window.addEventListener("resize", resizeCanvas);
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
 
   let confetti = [];
 
@@ -56,17 +46,13 @@ document.addEventListener("DOMContentLoaded", () => {
     requestAnimationFrame(animateConfetti);
   }
 
-  /* 💖 YES BUTTON */
+  /* 💖 YES */
   yesBtn.addEventListener("click", () => {
     createConfetti();
     animateConfetti();
 
     questionBox.classList.add("hidden");
     resultBox.classList.remove("hidden");
-
-    resultBox.style.animation = "none";
-    resultBox.offsetHeight;
-    resultBox.style.animation = "pop 0.8s ease";
   });
 
   /* 😈 NO BUTTON */

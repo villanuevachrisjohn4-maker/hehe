@@ -1,9 +1,5 @@
-* {
-  box-sizing: border-box;
-  font-family: 'Segoe UI', sans-serif;
-}
+* { box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
 
-/* 🌈 BACKGROUND */
 body {
   margin: 0;
   height: 100vh;
@@ -22,7 +18,7 @@ body {
   100% { background-position: 0% 50%; }
 }
 
-/* 🔊 OVERLAY */
+/* 🔊 AUDIO OVERLAY */
 #audioOverlay {
   position: fixed;
   inset: 0;
@@ -52,11 +48,9 @@ body {
   box-shadow: 0 25px 40px rgba(0,0,0,0.2);
   text-align: center;
   animation: pop 0.8s ease;
-
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
 }
 
 @keyframes pop {
@@ -65,30 +59,14 @@ body {
 }
 
 /* 🖼️ GIF */
-.gif {
-  width: 100%;
-  border-radius: 20px;
-  margin-bottom: 15px;
-}
+.gif { width: 100%; border-radius: 20px; margin-bottom: 15px; }
 
-/* 💕 TEXT */
-h2 {
-  color: #ff4d6d;
-  margin: 10px 0;
-}
+/* TEXT */
+h2 { color: #ff4d6d; margin: 10px 0; }
+.message { color: #ff6f91; font-size: 1.1rem; }
 
-.message {
-  color: #ff6f91;
-  font-size: 1.1rem;
-}
-
-/* 💕 BUTTONS */
-.buttons {
-  display: flex;
-  gap: 20px;
-  margin-top: 15px;
-}
-
+/* BUTTONS */
+.buttons { display: flex; gap: 20px; margin-top: 15px; }
 .btn {
   padding: 14px 28px;
   border-radius: 30px;
@@ -97,45 +75,11 @@ h2 {
   cursor: pointer;
   transition: 0.2s;
 }
-
 .yes { background: #ff4d6d; color: white; }
 .no { background: #ddd; }
+.btn:hover { transform: scale(1.15); }
 
-.btn:hover {
-  transform: scale(1.15);
-}
-
-/* ❤️ HEART (BPM SYNC) */
-.heart {
-  width: 50px;
-  height: 50px;
-  background: #ff4d6d;
-  margin-top: 20px;
-  transform: rotate(45deg);
-  animation: heartbeat var(--beat, 0.83s) infinite ease-in-out;
-}
-
-.heart::before,
-.heart::after {
-  content: "";
-  width: 50px;
-  height: 50px;
-  background: #ff4d6d;
-  border-radius: 50%;
-  position: absolute;
-}
-
-.heart::before { top: -25px; }
-.heart::after { left: -25px; }
-
-@keyframes heartbeat {
-  0%   { transform: rotate(45deg) scale(1); }
-  20%  { transform: rotate(45deg) scale(1.35); }
-  40%  { transform: rotate(45deg) scale(1); }
-  100% { transform: rotate(45deg) scale(1); }
-}
-
-/* 💥 CONFETTI */
+/* CONFETTI */
 #confetti {
   position: fixed;
   inset: 0;

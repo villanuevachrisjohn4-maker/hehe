@@ -4,20 +4,33 @@ const questionBox = document.getElementById("questionBox");
 const resultBox = document.getElementById("resultBox");
 const bgMusic = document.getElementById("bgMusic");
 
-/* YES BUTTON */
+/* 💖 YES BUTTON */
 yesBtn.addEventListener("click", () => {
+  // Start background music (user interaction safe)
+  bgMusic.volume = 0.7;
   bgMusic.play();
+
+  // Cute popup message
+  alert("I knew it! 😍💖");
+
+  // Switch screens
   questionBox.classList.add("hidden");
   resultBox.classList.remove("hidden");
 });
 
-/* NO BUTTON – IMPOSSIBLE MODE */
-noBtn.addEventListener("mouseenter", runAway);
-noBtn.addEventListener("touchstart", runAway);
+/* 😈 NO BUTTON – IMPOSSIBLE MODE */
+noBtn.addEventListener("mouseenter", moveNo);
+noBtn.addEventListener("touchstart", moveNo);
+noBtn.addEventListener("click", moveNo);
 
-function runAway() {
-  const x = Math.random() * (window.innerWidth - noBtn.offsetWidth);
-  const y = Math.random() * (window.innerHeight - noBtn.offsetHeight);
+function moveNo() {
+  const padding = 20;
+
+  const maxX = window.innerWidth - noBtn.offsetWidth - padding;
+  const maxY = window.innerHeight - noBtn.offsetHeight - padding;
+
+  const x = Math.random() * maxX;
+  const y = Math.random() * maxY;
 
   noBtn.style.position = "fixed";
   noBtn.style.left = `${x}px`;

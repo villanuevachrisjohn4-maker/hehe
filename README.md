@@ -2,17 +2,15 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Do You Miss Me? 💕</title>
+  <title>Do You Love Me? 💕</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- 🔊 TAP TO START OVERLAY -->
+  <!-- 🔊 TAP TO START -->
   <div id="audioOverlay">
-    <div class="overlay-box">
-      <p>Tap to start 💖</p>
-    </div>
+    <div class="overlay-box">Tap to start 💖</div>
   </div>
 
   <!-- 🎶 MUSIC -->
@@ -23,10 +21,10 @@
   <!-- 💥 CONFETTI -->
   <canvas id="confetti"></canvas>
 
-  <!-- 💖 QUESTION BOX -->
+  <!-- 💖 QUESTION -->
   <div class="container" id="questionBox">
     <img src="start.gif" class="gif">
-    <h2>Do you miss me? 💞</h2>
+    <h2>Do you love me? 💞</h2>
 
     <div class="buttons">
       <button class="btn yes" id="yesBtn">Yes 💖</button>
@@ -34,7 +32,14 @@
     </div>
   </div>
 
-  <!-- 😍 RESULT BOX -->
+  <!-- 😍 RESULT -->
   <div class="container hidden" id="resultBox">
     <img src="end.gif" class="gif">
-    <h2>I k
+    <h2>I knew it! 😍</h2>
+    <p class="message">You make my heart so happy 💕</p>
+    <div class="heart"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
